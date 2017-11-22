@@ -1,0 +1,63 @@
+<table>
+        <tr>
+            <td>
+                <div id="listView">
+                    <table id="subtitleTableHeader">
+                        <tr>
+                            <th class="subNumber">&nbsp;#</th>                
+                            <th class="subStart">&nbsp;Start</th>
+                            <th class="subEnd">&nbsp;End</th>
+                            <th class="subDuration">&nbsp;Duration</th>
+                            <th class="subTextHeader">&nbsp;Text</th>
+                        </tr>
+                    </table>
+                    <div id="tableContainer">
+                        <table id="subtitleTable">
+                            <tbody id="subtitleTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="currentSub">
+                        <textarea id="currentText" class="ui-widget-content"></textarea>                           
+                        <div>
+                            <a href="#" id="autoBreakText" class="ControlBarButton ui-state-default ui-corner-all" title="Auto break current text">Auto-break</a><br />
+                            <a href="#" id="unBreakText" class="ControlBarButton ui-state-default ui-corner-all" title="Auto break current text">Un-break</a>
+                        </div>
+                    </div> 
+                </div>
+            </td>
+            <td>
+                <div id="videoPlayerContainer">
+                    <div>
+                        <div id="videoResolution"></div>
+                        <div id="videoTime"></div>
+                    </div>
+                    <video id="video" onerror="failed(event)">
+                    </video>
+                    <div>
+                        <div id="ControlBar">
+                            <div id="firstControls">
+                                <a class="ControlBarButton ui-state-default ui-corner-all" href="#" id="play" title="Play">►</a>
+                                <a class="ControlBarButton ui-state-default ui-corner-all" href="#" id="pause" title="Pause">‖</a>
+                            </div>
+                            <div id="controlBarSliderPosition" title="Video position"></div>                                
+                            <div id="controlBarSliderVolume" title="Video volume"></div>                                
+                            <br />
+                            <div id="nextControls">
+                                <a href="#" id="goBack3Secs" class="ControlBarButton ui-state-default ui-corner-all" title="Go back 3 seconds">&lt;3s</a>
+                                <a href="#" id="goBack100Ms" class="ControlBarButton ui-state-default ui-corner-all" title="Go back 100 milliseconds">&lt;100ms</a>
+                                <a href="#" id="play2SecsAndBack" class="ControlBarButton ui-state-default ui-corner-all" title="Play 2 seconds and back to current position">2s+back</a>
+                                
+                            </div>
+                        </div>            
+                    </div>
+                    <div id="previewContainer"><div id="preview"></div></div>
+                </div>  
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <canvas id="timeLineCanvas" width="1236" height="150"></canvas>
+            </td>
+        </tr>
+    </table>

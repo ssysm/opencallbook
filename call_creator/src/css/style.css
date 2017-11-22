@@ -1,0 +1,417 @@
+body
+{
+    font: 80% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+    padding: 15px;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    left: 0; top: 0;
+    -webkit-font-smoothing: antialiased;
+    background-color: #bbbbbb;
+    background-color:rgb(48, 48, 48);
+    color: White;
+}
+a
+{
+    text-decoration: underline;
+    font-weight:bold;
+}
+a:link, a:visited
+{
+    color:#eeeeff;
+}
+a:hover
+{
+    color:white;
+}
+#title
+{
+    padding:0;
+    width: 98%;
+    margin:0;
+    margin-bottom:15px;
+    text-shadow: rgba(224, 224, 224, 0.4) 3px 3px 3px;
+
+    -webkit-transform: translate(0px, 0px) rotateZ(0deg) scale(1.0);
+    -webkit-transition: -webkit-transform 2s ease-in-out;
+    -moz-transform: translate(0px, 0px) rotate(0deg) scale(1.0);
+    -moz-transition: all 2s ease 0s;
+}
+#title:hover
+{
+    -webkit-transform: translate(470px, 20px) rotateZ(1deg) scale(1.5);
+    -webkit-transition: -webkit-transform 2s ease-in-out;
+    -moz-transform: translate(470px, 20px) rotate(1deg) scale(1.5);
+    -moz-transition: all 2s ease 0;
+}
+#listView
+{
+    background-color: rgb(48, 48, 48);
+    width:620px;
+    float: left;
+    border-color: #eeeeee;
+    border-collapse: collapse;
+    margin-right:10px;
+}
+#subtitleTableHeader
+{
+    background-color:#888888;
+    border-style:solid;
+    border-width:1px;
+    border-color:#eeeeee;
+    width:100%;
+}
+#subtitleTableHeader tr
+{
+    border-collapse:collapse;
+    margin: 0;
+}
+#subtitleTableHeader td
+{
+    border-collapse:collapse;
+    margin: 0;
+}
+#subtitleTableBody td
+{
+    border-style: solid;
+    border-width: 1px;
+    margin: 0;
+    border-color: #eeeeee;
+}
+.listViewAlternate
+{
+    background-color: rgb(78, 78, 78);
+}
+#subtitleTable
+{
+
+    border-collapse:collapse;
+}
+#tableContainer
+{
+    height: 365px;
+    overflow-y: scroll;
+    border-style: solid;
+    border-width: 0;
+    border-color: #5e5e5e;
+    border-bottom-width:1px;
+}
+#currentSub
+{
+    margin-top:3px;
+}
+#currentText
+{
+    float:left;
+    font: 100% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+    overflow:auto;
+    width: 475px;
+    height: 50px;
+}
+#autoBreakText
+{
+    position:relative;
+    top:6px;
+    margin-left:9px;
+    width:75px;
+}
+#unBreakText
+{
+    position:relative;
+    top:16px;
+    margin-left:9px;
+    width:75px;
+}
+#videoPlayerContainer
+{
+    width:600px;
+    height:426px;
+    float: left;
+}
+#video
+{
+    margin-top:0px;
+    padding-top:-14px;
+    width:600px;
+    height:340px;
+    float: left;
+}
+#subtitleTable td, th
+{
+    overflow:hidden;
+    text-align: left;
+}
+.subSelected
+{
+    background-color: Lime;
+}
+.subNumber
+{
+    width: 50px;
+}
+.subStart
+{
+    width: 80px;
+}
+.subEnd
+{
+    width: 80px;
+}
+.subDuration
+{
+    width: 70px;
+}
+.subText
+{
+    width:306px;
+}
+.subTextHeader
+{
+    width:311px;
+}
+.highlight
+{
+    background-color: GrayText;
+}
+#timeLineContextMenu
+{
+    position:absolute;
+    display: block;
+    background-color: rgb(48, 48, 48);
+    border-width:1px;
+    border-style:outset;
+    border-color:White;
+    padding:5px;
+    box-shadow: rgba(0, 0, 0, 0.5) 7px 7px 9px;
+    border-radius:5px;
+}
+#timeLineContextMenu ul
+{
+     padding: 0px;
+}
+#timeLineContextMenu ul > li
+{
+     list-style-type: none;
+     padding: 5px;
+     padding-right: 20px;
+}
+#listviewContextMenu
+{
+    position:absolute;
+    display: block;
+    background-color: rgb(48, 48, 48);
+    border-width:1px;
+    border-style:outset;
+    border-color:White;
+    padding:5px;
+    box-shadow: rgba(0, 0, 0, 0.5) 7px 7px 9px;
+    border-radius:5px;
+}
+#listviewContextMenu ul
+{
+     padding: 0px;
+}
+#listviewContextMenu ul > li
+{
+     list-style-type: none;
+     padding: 5px;
+     padding-right: 20px;
+}
+#mainMenu ul
+{
+     padding-left: 0px;
+}
+#mainMenu ul > li
+{
+     list-style-type: none;
+     display: inline;
+     padding-right: 20px;
+     padding-left: 0px;
+}
+#mainMenu ul > li > ul
+{
+    position:absolute;
+    display: block;
+    background-color: rgb(48, 48, 48);
+    border-width:1px;
+    border-style:outset;
+    border-color:White;
+    padding:10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 7px 7px 9px;
+    border-radius:5px;
+}
+#mainMenu ul > li > ul > li
+{
+     list-style-type: none;
+     display: block;
+     padding:5px;
+}
+.mainMenuShow
+{
+    display: block;
+    position:absolute;
+    padding-top: 5px;
+    background-color: Lime;
+}
+#previewContainer
+{
+    background-color:transparent;
+    text-align:center;
+    opacity: 0.7;
+    position:relative;
+    height:200px;
+    top:117px;
+}
+#preview
+{
+    float:left;
+    background-color:#111111;
+    width:100%;
+    font-size:180%;
+    opacity: 1.0;
+    text-align:center;
+    position:absolute;
+    bottom:0px;
+}
+#backgroundFiller
+{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height: 100%;
+    background-color:#eeeeee;
+    opacity: 0.5;
+    z-index:1000;
+}
+.msgBoxText
+{
+    position:absolute;
+    z-index:1001;
+    background-color: rgb(48, 48, 48);
+    padding:50px;
+    padding-bottom:30px;
+    border-radius: 15px;
+    border-style: outset;
+    border-width: 1px;
+    box-shadow: rgba(0, 0, 0, 0.25) 7px 7px 9px;
+}
+iframe
+{
+    border-style:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+.closeButton
+{
+    font-size:200%;
+    text-decoration: none;
+    float:right;
+    margin-top:10px;
+    margin-right:10px;
+    position:relative;
+    top:-45px;
+    left:+38px;
+    border-radius:5px;
+    padding:5px;
+}
+.closeButton:hover
+{
+    background-color:#aaaaaa;
+}
+#ControlBar
+{
+    background-color: #303030;
+    padding-right:5px;
+    padding-left:5px;
+    padding-bottom:5px;
+}
+#firstControls
+{
+    float: left;
+    position:relative;
+    top:8px;
+}
+.ControlBarItem
+{
+    margin:0px;
+    margin-bottom:10px;
+    padding-right:5px;
+    padding-left:5px;
+    padding-bottom:5px;
+    text-decoration: none;
+    color: #00ff00;
+}
+.ControlBarItem:hover
+{
+    margin:0px;
+    margin-bottom:10px;
+    padding-right:5px;
+    padding-left:5px;
+    padding-bottom:5px;
+    text-decoration: none;
+    color: lime;
+}
+.ControlBarButton
+{
+    padding:3px;
+    text-decoration: none;
+    color: lime;
+}
+.ControlBarButton:hover
+{
+    padding:3px;
+    text-decoration: none;
+    color: lime;
+}
+#play
+{
+    padding-left:6px;
+    padding-right:6px;
+}
+#pause
+{
+    padding-left:6px;
+    padding-right:6px;
+}
+#controlBarSliderPosition
+{
+    margin-left:14px;
+    width:400px;
+    float:left;
+    position:relative;
+    top: 12px;
+}
+#controlBarSliderVolume
+{
+    margin-left:14px;
+    width:100px;
+    float:left;
+    position:relative;
+    top: 12px;
+}
+#nextControls
+{
+    float:left;
+    position:relative;
+    left:-42px;
+    top:22px;
+    padding-left:0px;
+    margin-bottom:30px;
+}
+input[type="button"]:hover
+{
+    color: lime;
+}
+#timeLineCanvas
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #555555;
+}
+#translateIframe, #translateBingIframe
+{
+    width: 600px;
+    height: 450px;
+}
