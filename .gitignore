@@ -57,3 +57,12 @@ typings/
 # dotenv environment variables file
 .env
 
+#remove pre-compiled code
+dist/
+
+#Remove IDE Workspace
+
+.idea/
+.vs/
+.vscode/
+
