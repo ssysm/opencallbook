@@ -7,8 +7,7 @@ body
     position: absolute;
     left: 0; top: 0;
     -webkit-font-smoothing: antialiased;
-    background-color: #bbbbbb;
-    background-color:rgb(48, 48, 48);
+    background-color: #aaaaaa;
     color: White;
 }
 a
@@ -107,6 +106,7 @@ a:hover
     overflow:auto;
     width: 475px;
     height: 50px;
+    resize: none;
 }
 #autoBreakText
 {

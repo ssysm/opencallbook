@@ -18,12 +18,13 @@ var sliderPosMoving = false;
 var storage; // window.localStorage
 var ctrlDown = false;
 
-function paragraph(number, start, end, text) {
+function paragraph(number, start, end, text,action) {
     this.number = number;
     this.start = start;
     this.end = end;
     this.duration = end - start;
     this.text = text;
+    this.action = action;
 }
 
 function renumberSubtitlesInTable() {
@@ -1199,56 +1200,7 @@ $(document).ready(function () {
     });
     $('#subtitleDownloadOK').live('click', function (e) {
         var useCrlf = $('#settingWindowsNewLine').attr('checked') === 'checked';
-        $.ajax({
-            url: "/SubtitleEdit/OnlineSetFormat",
-            data: "format=" + $('#subtitleDownloadFormat').val(),
-            success: function (data) {
-                $.ajax({
-                    type: 'POST',
-                    url: "/SubtitleEdit/OnlineUploadSubtitle?formatName=" + encodeURIComponent($('#subtitleDownloadFormat').val()) + "&crlf=" + useCrlf,
-                    data: JSON.stringify(subtitles),
-                    contentType: "application/json; charset=utf-8",
-                    dataType: 'json',
-                    success: function (data) {
-                        hideMsgBox();
-                        window.location = '/SubtitleEdit/OnlineDownloadSubtitle';
-                    },
-                    error: function (jqXHR, textStatus, errorThrown) {
-                        hideMsgBox();
-                        alert("Error: " + textStatus);
-                        alert("Incoming text: " + jqXHR.responseText);
-                    }
-                });
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                hideMsgBox();
-                alert("Error: " + textStatus);
-                alert("Incoming text: " + jqXHR.responseText);
-            }
-        });
-    });
-
-    $('#subtitleExportPlainTextOK').live('click', function (e) {
-        var removeStyling = $('#exportPlainTextRemoveStylingCheckBox').attr('checked') === 'checked';
-        var formatting = $("input:radio[name ='exportPlainTextStyle']:checked").val();
-        $.ajax({
-            type: 'POST',
-            url: "/SubtitleEdit/GetPlainText?formatting=" + formatting + "&removeStyling=" + removeStyling,
-            data: JSON.stringify(subtitles),
-            contentType: "application/json; charset=utf-8",
-            dataType: 'json',
-            cache: false,
-            success: function (data) {
-                hideMsgBox();
-                //window.location = 'data:text/plain;filename:subtitle.ext;attqachment;charset=utf-8,' + encodeURIComponent(data);
-                window.location = '/download/OnlineDownloadPlainText';//'?subtitles=' + encodeURIComponent(JSON.stringify(subtitles));
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                hideMsgBox();
-                alert("Error: " + textStatus);
-                alert("Incoming text: " + jqXHR.responseText);
-            }
-        });
+        console.log(JSON.stringify(subtitles))
     });
 
     // add close buttons to all dialogs
@@ -1293,3 +1245,4 @@ $(document).ready(function () {
     setInterval(autoSaveLastSubtitleAndVideo, 10000);
 
 });
+
